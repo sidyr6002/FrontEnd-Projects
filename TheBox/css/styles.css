@@ -24,6 +24,39 @@ body {
 	line-height: 1.5;
 }
 
+header {
+	display: flex;
+	align-items: center;
+	margin: 2em 0;
+}
+
+.nav {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav_link {
+	color: var(--clr-text);
+	text-transform: capitalize;
+	text-decoration: none;
+}
+
 img {
 	max-width: 100%;
+}
+
+.title {
+	color: var(--clr-accent);
+	text-transform: uppercase;
+	margin: 0;
+	font-size: clamp(2em, 10vw, 6em);
+	line-height: 1;
+}
+
+.location {
+	color: var(--clr-icons);
+	margin: 0;
+	font-size: 1.2em;
+	margin-bottom: 1em;
 }
