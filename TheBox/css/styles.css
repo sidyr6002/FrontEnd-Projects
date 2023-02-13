@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-icons: #929292;
+	--clr-text: #fff;
+	--clr-bg-dark: #242424;
+	--clr-bg-light: #3b3b3b;
+	--clr-accent: #ff7600;
+}
+
+body {
+	margin: 2em;
+	background-color: var(--clr-bg-dark);
+	color: var(--clr-text);
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+img {
+	max-width: 100%;
+}
