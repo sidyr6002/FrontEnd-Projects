@@ -24,6 +24,80 @@ body {
 	line-height: 1.5;
 }
 
+@media (min-width: 800px) {
+	body {
+		margin: 0;
+	}
+
+	.main-grid {
+		display: grid;
+		grid-template-columns:
+			minmax(1em, 1fr)
+			repeat(3, minmax(10em, 33em))
+			minmax(1em, 1fr);
+		gap: 2em;
+
+		position: relative;
+	}
+
+	header {
+		grid-column: 2 / 5;
+	}
+
+	main {
+		grid-column: 2 / -1;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(10em, 33em)) minmax(1em, 1fr);
+		gap: 2em;
+		grid-auto-flow: dense;
+	}
+
+	main::after {
+		content: "";
+		position: absolute;
+		background-color: var(--clr-bg-light);
+		top: 0;
+		bottom: 0;
+		left: 0%;
+		right: 0%;
+		grid-column: 3 / 4;
+		z-index: -3;
+	}
+
+	footer {
+		grid-column: 2 / 3;
+	}
+
+	.title {
+		grid-column: 1 / 3;
+		grid-row: 1;
+	}
+
+	.primary-image {
+		grid-column: 2 / 5;
+		grid-row: 1 / 4;
+		z-index: -1;
+	}
+
+	.location,
+	.description {
+		grid-column: 1 / 2;
+	}
+
+	.secondary-images {
+		grid-column: 2 / 3;
+		margin-top: 2.5em;
+	}
+
+	.secondary-image {
+		width: 100%;
+	}
+
+	.social-links {
+		margin-left: 10%;
+	}
+}
+
 header {
 	display: flex;
 	align-items: center;
@@ -31,8 +105,8 @@ header {
 }
 
 .nav {
-	flex-grow: 1;
 	display: flex;
+	flex-grow: 1;
 	justify-content: space-around;
 }
 
@@ -42,21 +116,77 @@ header {
 	text-decoration: none;
 }
 
+.nav_link:hover,
+.nav_link:focus {
+	color: var(--clr-accent);
+}
+
 img {
 	max-width: 100%;
+}
+
+.book-btn {
+	cursor: pointer;
+	display: inline-block;
+	background: transparent;
+	color: var(--clr-text);
+	font-size: 1.2em;
+	border: none;
+	padding: 0.5em;
+	position: relative;
+	align-self: start;
+	justify-self: start;
+}
+
+.book-btn::after {
+	content: "";
+	position: absolute;
+	height: 0.6em;
+	background: var(--clr-accent);
+	width: 70%;
+	left: 6%;
+	top: 50%;
+	/* border-radius: 10px; */
+	z-index: -1;
+	transition: 200ms cubic-bezier(1, -0.02, 0.47, 0.99);
+	transform-origin: bottom left;
+}
+
+.book-btn:hover::after,
+.book-btn:focus::after {
+	transform: scale(1.275, 1.9);
 }
 
 .title {
 	color: var(--clr-accent);
 	text-transform: uppercase;
 	margin: 0;
-	font-size: clamp(2em, 10vw, 6em);
+	font-size: clamp(4rem, 10vw, 12rem);
 	line-height: 1;
 }
 
 .location {
 	color: var(--clr-icons);
 	margin: 0;
-	font-size: 1.2em;
+	font-size: 2rem;
 	margin-bottom: 1em;
+	/* justify-self: start; */
+}
+
+.secondary-images {
+	display: flex;
+	gap: 0.5em;
+}
+
+.secondary-image {
+	width: 49%;
+}
+
+footer {
+	margin-top: 2em;
+}
+
+.social-links {
+	display: flex;
+	gap: 2em;
 }
