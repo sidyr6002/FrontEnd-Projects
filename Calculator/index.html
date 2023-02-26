@@ -54,16 +54,4 @@
 			</div>
 		</div>
 	</body>
-
-	<script>
-		const display = document.querySelector("input[name='display']");
-
-		function adjustFontSize() {
-			const displayWidth = display.clientWidth;
-			const fontSize = Math.floor(displayWidth / 8);
-			display.style.fontSize = fontSize + "px";
-		}
-
-		display.addEventListener("input", adjustFontSize);
-	</script>
 </html>

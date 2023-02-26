@@ -6,4 +6,4 @@ Create a webpage displaying a centered header, main body, and a footer using HTM
 
 ## Calculator
 
-This project includes an HTML, CSS, and JavaScript file that work together to create a simple calculator with a modern and stylish user interface.
+This project includes an HTML and CSS file with inline JS that work together to create a simple calculator with a modern and stylish user interface.
