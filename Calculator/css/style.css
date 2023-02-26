@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.main-grid {
+	width: 100%;
+	height: 100vh;
+	background: #e3f9ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calculator-grid {
+	background: #4e5357e8;
+	padding: 1.8rem;
+	border-radius: 0.7rem;
+}
+
+.calculator-grid form input {
+	border: 0;
+	outline: 0;
+	width: 5em;
+	height: 5em;
+	border-radius: 2.5em;
+	box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+		5px 5px 15px rgba(0, 0, 0, 0.2);
+	background: transparent;
+	font-size: 0.8em;
+	color: #fff;
+	cursor: pointer;
+	margin: 0.7em;
+}
+
+form .display {
+	display: flex;
+	justify-content: flex-end;
+	height: 7em;
+}
+
+form .display input {
+	text-align: right;
+	flex: 1;
+	font-size: 3em;
+	box-shadow: none;
+	margin: 0;
+	height: inherit;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+form input.equal-btn {
+	width: 12.7em;
+}
