@@ -60,8 +60,13 @@ form .display input {
 	text-overflow: ellipsis;
 	background-color: #3a3f43;
 	border-radius: 0.5em;
+	/* text-indent: -4px; */
 }
 
 form input.equal-btn {
 	width: 12.7em;
+}
+
+#equal-sign {
+	color: #65e26d;
 }
