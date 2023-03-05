@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+	--color-white: hsl(252, 30%, 100%);
+	--color-light: hsl(252, 30%, 95%);
+	--color-gray: hsl(252, 15%, 65%);
+	--color-primary: hsl(252, 75%, 60%);
+	--color-secondary: hsl(252, 100%, 90%);
+	--color-success: hsl(120, 95%, 65%);
+	--color-danger: hsl(0, 95%, 65%);
+	--color-dark: hsl(252, 30%, 17%);
+	--color-black: hsl(252, 30%, 10%);
+
+	--border-radius: 2rem;
+	--card-border-radius: 1rem;
+	--btn-padding: 0.6rem 2rem;
+	--search-padding: 0.6rem 1rem;
+	--card-padding: 1rem;
+
+	--sticky-top-left: 5.4rem;
+	--sticky-top-right: -18rem;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	border: none;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: var(--color-dark);
+	background: var(--color-light);
+	overflow-x: hidden;
+}
+
+.container {
+	width: 80vw;
+	margin: 0 auto;
+}
+
+.profile-picture {
+	width: 3rem;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.btn {
+	display: inline-block;
+	padding: var(--btn-padding);
+	font-weight: 500;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: all 300ms ease;
+	font-size: 1rem;
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+.btn-create {
+	background: var(--color-primary);
+	color: white;
+}
+
+.text-bold {
+	font-weight: 500;
+}
+
+.text-muted {
+	color: var(--color-gray);
+}
+
+/* ============================ NAVBAR ========================= */
+
+nav {
+	width: 100%;
+	background-color: var(--color-white);
+	padding: 1rem 0;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+
+nav .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav .search-bar {
+	background: var(--color-light);
+	border-radius: var(--border-radius);
+	padding: var(--search-padding);
+}
+
+nav .search-bar input[type="search"] {
+	background: transparent;
+	margin-left: 1rem;
+	width: 30vw;
+	font-size: 0.9rem;
+	color: var(--color-dark);
+}
+
+nav .search-bar input[type="search"]::placeholder {
+	color: var(--color-gray);
+}
+
+nav .create-dp {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* =========================== MAIN ================================== */
+
+main {
+	position: relative;
+	top: 6.5rem;
+}
+
+main .container {
+	display: grid;
+	grid-template-columns: 18vw auto 20vw;
+	column-gap: 2rem;
+	position: relative;
+}
+
+main .container .left {
+	height: max-content;
+	position: sticky;
+	top: var(--sticky-top-left);
+}
+
+main .container .left .profile {
+	padding: var(--card-padding);
+	border-radius: var(--card-border-radius);
+	background: var(--color-white);
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+	width: 100%;
+}
+
+.left .side-bar {
+	margin-top: 1.5rem;
+	background: var(--color-white);
+	border-radius: var(--card-border-radius);
+}
+
+.left .side-bar .menu-item {
+	display: flex;
+	gap: 1.5rem;
+}
