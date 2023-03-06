@@ -17,7 +17,7 @@
 	--search-padding: 0.6rem 1rem;
 	--card-padding: 1rem;
 
-	--sticky-top-left: 5.4rem;
+	--sticky-top-left: 6rem;
 	--sticky-top-right: -18rem;
 }
 
@@ -140,6 +140,8 @@ main .container {
 	column-gap: 2rem;
 	position: relative;
 }
+
+/* =================== LEFT ========================= */
 
 main .container .left {
 	height: max-content;
@@ -344,5 +346,230 @@ main .container .left .profile {
 	width: 2.2rem;
 	aspect-ratio: 1/1;
 	align-self: start;
-	border: 2px solid var(--color-primary);
+	border: 2.5px solid var(--color-primary);
+}
+
+/* -------------- CREATE POST MIDDLE ----------------------- */
+
+.middle .create-post-form {
+	display: flex;
+	/* width: 100%; */
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1.5rem;
+	background: var(--color-white);
+	padding: 0.5rem var(--card-padding);
+	border-radius: var(--border-radius);
+}
+
+.middle .create-post-form input[type="text"] {
+	justify-self: start;
+	width: 100%;
+	padding-left: 1rem;
+	background: transparent;
+	color: var(--color-dark);
+	margin-right: 1rem;
+}
+
+/* ---------------- FEEDS ----------------------- */
+
+.middle .feeds .feed {
+	background: var(--color-white);
+	padding: var(--card-padding);
+	border-radius: var(--card-border-radius);
+	margin: 1.2rem 0;
+	font-size: 0.85rem;
+	line-height: 1.5;
+}
+
+.middle .feed .head {
+	display: flex;
+	justify-content: space-between;
+}
+
+.middle .feed .head .edit {
+	font-size: 1.4rem;
+	margin-right: 0.5rem;
+}
+
+.middle .feed .user {
+	display: flex;
+	gap: 1rem;
+}
+
+.middle .feed .photo {
+	border-radius: var(--card-border-radius);
+	overflow: hidden;
+	margin: 0.8rem 0;
+}
+
+.middle .feed .action-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.4rem;
+	margin: 0.2rem 0.5rem;
+}
+
+.middle .feed .likes-info {
+	display: flex;
+	/* margin-left: 1rem; */
+}
+
+.middle .feed .likes-info span {
+	width: 1.3rem;
+	aspect-ratio: 1/1;
+	overflow: hidden;
+	display: block;
+	border-radius: 50%;
+	border: 2px solid var(--color-white);
+	margin-left: -0.5rem;
+}
+
+.middle .feed .likes-info span:first-child,
+.middle .feed .likes-info p,
+.middle .feed .caption,
+.middle .feed .comments {
+	margin-left: 0.5rem;
+}
+
+.middle .feed .caption {
+	margin-top: 0.8rem;
+}
+
+/* =================== RIGHT =============================== */
+
+main .container .right {
+	height: max-content;
+	position: sticky;
+	top: var(--sticky-top-right);
+	bottom: 0;
+}
+
+.right .messages {
+	background: var(--color-white);
+	padding: var(--card-padding);
+	border-radius: var(--card-border-radius);
+}
+
+.right .messages .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.right .messages .header > i {
+	font-size: 1.2rem;
+}
+
+.right .messages .search-bar {
+	margin: 0.5rem 0 1rem 0;
+	padding: var(--search-padding);
+	width: 100%;
+	background: var(--color-light);
+	border-radius: var(--border-radius);
+}
+
+.right .messages .search-bar > input {
+	background: transparent;
+	margin-left: 0.5rem;
+	font-size: 0.8rem;
+}
+
+.right .messages .category {
+	display: flex;
+	align-items: center;
+	margin: 1.5rem 0;
+}
+
+.right .messages .category h5 {
+	font-size: 0.9rem;
+	width: 100%;
+	text-align: center;
+	border-bottom: 4px solid var(--color-light);
+	padding-bottom: 0.4rem;
+}
+
+.right .messages .category .active {
+	border-color: var(--color-primary);
+}
+
+.right .messages .message {
+	margin-top: 1rem;
+	display: flex;
+	gap: 1rem;
+	align-items: start;
+}
+
+.right .messages .message p {
+	font-size: 0.8rem;
+}
+
+.right .messages .message .profile-picture {
+	position: relative;
+	overflow: visible;
+	width: 3rem;
+}
+
+.right .messages .message .profile-picture > img {
+	border-radius: 50%;
+}
+
+.right .messages .message .profile-picture .active {
+	width: 0.8rem;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	border: 3px solid var(--color-white);
+	background: var(--color-success);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* -------------- REQUESTS -------------------- */
+
+main .right .friend-requests {
+	margin-top: 3rem;
+	padding: var(--card-padding);
+	background: var(--color-white);
+	border-radius: var(--card-border-radius);
+}
+
+.right .friend-requests h3 {
+	width: 100%;
+	margin-bottom: 1rem;
+	text-align: center;
+	border-bottom: 4px solid var(--color-light);
+	padding-bottom: 0.4rem;
+}
+
+.right .friend-requests .request {
+	border-radius: var(--card-border-radius);
+	padding: var(--card-padding);
+	background: rgb(207, 208, 230);
+	margin-bottom: 1rem;
+}
+
+.right .friend-requests .request .info {
+	display: flex;
+	align-items: start;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	/* color: white; */
+}
+
+.right .friend-requests .request .info .user-detail h5 {
+	font-size: 1.1rem;
+	color: var(--color-primary);
+}
+
+.right .friend-requests .request .info .user-detail > p {
+	font-size: 0.85rem;
+	color: black;
+}
+
+.right .friend-requests .request .action {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
 }
