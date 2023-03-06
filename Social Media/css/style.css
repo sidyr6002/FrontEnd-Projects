@@ -112,7 +112,7 @@ nav .search-bar {
 nav .search-bar input[type="search"] {
 	background: transparent;
 	margin-left: 1rem;
-	width: 30vw;
+	width: 28vw;
 	font-size: 0.9rem;
 	color: var(--color-dark);
 }
@@ -157,13 +157,192 @@ main .container .left .profile {
 	width: 100%;
 }
 
+/* --------------------SIDE BAR ----------------- */
+
 .left .side-bar {
 	margin-top: 1.5rem;
 	background: var(--color-white);
 	border-radius: var(--card-border-radius);
+	/* overflow: hidden; */
 }
 
 .left .side-bar .menu-item {
 	display: flex;
-	gap: 1.5rem;
+	align-items: center;
+	height: 4rem;
+	cursor: pointer;
+	transition: all 300ms ease;
+	position: relative;
+}
+
+.left .side-bar .menu-item:hover {
+	background: var(--color-light);
+}
+
+.left .side-bar .menu-item i {
+	font-size: 1.6rem;
+	color: var(--color-gray);
+	margin-left: 2rem;
+	position: relative;
+	white-space: nowrap;
+}
+
+.left .side-bar i .notification-count {
+	background: var(--color-danger);
+	color: white;
+	font-size: 0.7rem;
+	width: auto;
+	display: inline-flex;
+	flex: none;
+	white-space: normal;
+	padding: 0 0.3rem;
+	border-radius: 0.8rem;
+	position: absolute;
+	top: -0.2rem;
+	right: -0.7rem;
+}
+
+.left .side-bar h3 {
+	margin-left: 1.5rem;
+	font-size: 1.2rem;
+}
+
+.left .side-bar .active {
+	background: var(--color-light);
+}
+
+.left .side-bar .active i,
+.left .side-bar .active h3 {
+	color: var(--color-primary);
+}
+
+.left .side-bar .active::before {
+	content: "";
+	display: block;
+	width: 0.5rem;
+	height: 100%;
+	position: absolute;
+	background: var(--color-primary);
+}
+
+.left .side-bar .menu-item:first-child.active {
+	border-top-left-radius: var(--card-border-radius);
+	overflow: hidden;
+}
+
+.left .side-bar .menu-item:last-child.active {
+	border-bottom-left-radius: var(--card-border-radius);
+	overflow: hidden;
+}
+
+/* ---------------- SIDE BAR - BUTTON ------------------- */
+
+.left .btn {
+	margin-top: 1.5rem;
+	width: 100%;
+	text-align: center;
+	padding: 0.8rem 0;
+}
+
+/* --------------------- SIDE BAR - NOTIFICATION POP-UP ------------------- */
+
+.left .notifications-popup {
+	position: absolute;
+	top: 0;
+	left: 112%;
+	width: max-content;
+	background: var(--color-white);
+	border-radius: var(--card-border-radius);
+	padding: var(--card-padding);
+	z-index: 8;
+	display: none;
+	/* box-shadow: 0 0 2rem hsl(var(--color-primary), 75%, 60% 25%); */
+}
+
+.left .notifications-popup::before {
+	content: "";
+	width: 2rem;
+	aspect-ratio: 1/1;
+	background: var(--color-white);
+	display: block;
+	position: absolute;
+	transform: rotate(45deg);
+	left: -1%;
+	z-index: -10;
+}
+
+.left .notifications-popup > div {
+	display: flex;
+	align-items: start;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.left .notifications-popup small {
+	display: block;
+}
+
+/* ======================== MIDDLE ============================ */
+
+.middle .stories {
+	display: flex;
+	justify-content: space-between;
+	height: 12rem;
+	gap: 0.5rem;
+	/* background: green; */
+}
+
+.middle .stories .story {
+	padding: var(--card-padding);
+	border-radius: var(--card-border-radius);
+	/* background: red; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-size: 0.85rem;
+	color: white;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.middle .stories .story::before {
+	content: "";
+	display: block;
+	width: 100%;
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+	height: 5rem;
+	position: absolute;
+	bottom: 0;
+	left: 0%;
+}
+
+.middle .stories .story .name {
+	z-index: 4;
+}
+
+.middle .stories .story:nth-child(1) {
+	background: url("../images/story-1.jpg") no-repeat center center/cover;
+}
+.middle .stories .story:nth-child(2) {
+	background: url("../images/story-2.jpg") no-repeat center center/cover;
+}
+.middle .stories .story:nth-child(3) {
+	background: url("../images/story-3.jpg") no-repeat center center/cover;
+}
+.middle .stories .story:nth-child(4) {
+	background: url("../images/story-4.jpg") no-repeat center center/cover;
+}
+.middle .stories .story:nth-child(5) {
+	background: url("../images/story-5.jpg") no-repeat center center/cover;
+}
+.middle .stories .story:nth-child(6) {
+	background: url("../images/story-6.jpg") no-repeat center center/cover;
+}
+
+.middle .story .profile-picture {
+	width: 2.2rem;
+	aspect-ratio: 1/1;
+	align-self: start;
+	border: 2px solid var(--color-primary);
 }
