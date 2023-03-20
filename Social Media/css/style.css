@@ -13,8 +13,6 @@
 	--color-black: hsl(252, 30%, 10%);
 	--color-jetblac: hsl(0, 0%, 25%);
 
-	/* rgb(207, 208, 230); */
-
 	--border-radius: 2rem;
 	--card-border-radius: 1rem;
 	--btn-padding: 0.6rem 2rem;
@@ -459,6 +457,7 @@ main .container .right {
 	background: var(--color-white);
 	padding: var(--card-padding);
 	border-radius: var(--card-border-radius);
+	/* border: 1.5px solid var(--color-primary); */
 }
 
 .right .messages .header {
@@ -606,7 +605,7 @@ main .right .friend-requests {
 	display: grid;
 	place-items: center;
 	font-size: 0.95rem;
-	display: none;
+	/* display: none; */
 }
 
 .customize-theme .card {
@@ -781,7 +780,7 @@ main .right .friend-requests {
 	}
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
 	.right .friend-requests .request .action .btn {
 		padding: var(--btn-padding);
 	}
@@ -874,11 +873,11 @@ main .right .friend-requests {
 	main .container .right {
 		display: block;
 		grid-column: 1/4;
-		position: absolute;
+		position: fixed;
 		align-items: center;
 		z-index: 10;
-		top: 11rem;
-		right: 5.5rem;
+		top: 13rem;
+		right: 6.5rem;
 		display: none;
 	}
 
@@ -889,7 +888,7 @@ main .right .friend-requests {
 		aspect-ratio: 1/1;
 		background: var(--color-white);
 		position: absolute;
-		top: 1rem;
+		top: 5.5rem;
 		right: -0.5rem;
 		z-index: -500;
 		transform: rotate(45deg);
@@ -899,3 +898,57 @@ main .right .friend-requests {
 		display: none;
 	}
 }
+
+/* ----------------------- Screen less than 400px ------------------ */
+
+/* @media screen and (max-width: 400px) {
+	body {
+		width: 100vw;
+		padding: auto;
+	}
+
+	nav .container {
+		padding: 0 0.2rem;
+	}
+
+	main .container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	main .container .middle {
+		width: 100%;
+	}
+
+	main .container .left {
+		display: flex;
+		flex-direction: column;
+		background: yellow;
+	}
+
+	main .container .left .profile {
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	main .container .left .side-bar {
+		display: flex;
+		flex-direction: row;
+		position: fixed;
+		justify-content: space-between;
+		width: max-content;
+		top: 5rem;
+		left: -2vw;
+	}
+
+	/* main .container .side-bar {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: red;
+		grid-column: 1/3;
+	} */
