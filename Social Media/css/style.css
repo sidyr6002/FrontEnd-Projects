@@ -606,7 +606,7 @@ main .right .friend-requests {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	display: grid;
+	display: none;
 	text-align: center;
 	place-items: center;
 	font-size: 0.95rem;
