@@ -619,7 +619,7 @@ main .right .friend-requests {
 	border-radius: var(--card-border-radius);
 	width: 50%;
 	position: absolute;
-	box-shadow: 0 0 1rem var(--color-dark);
+	box-shadow: 0 0 1rem black;
 	color: var(--color-black);
 }
 
