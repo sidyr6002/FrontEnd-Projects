@@ -17,3 +17,33 @@ The main purpose of Socius is to provide a platform for users to create and cust
 The application is designed to be responsive and is optimized for both large and small screens. This ensures that users can access and use the application regardless of the device they are using.
 
 Socius is built with a user-friendly interface that allows users to easily navigate and customize their website. The application also includes a preview feature that enables users to view their website as they customize it.
+
+## 
+## TO RUN ALL THE PROJECTS 
+
+### Prerequisites 
+
+A web browser, such as Chrome, Firefox, or Safari
+
+### Installation
+
+1. Clone the project from GitHub: 
+``` git clone https://github.com/sidyr6002/FrontEnd-Projects.git ```
+
+2. Open it in VS Code and navigate to the project directory: eg. Social Media
+3. Open the `index.html` file in your web browser.
+
+### Usage
+
+1. Click on the buttons to see some interactive features.
+2. Modify the HTML, CSS, and JavaScript files to customize the web page.
+
+### Contributing
+
+Please feel free to fork the repository, make changes, and submit pull requests.
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
