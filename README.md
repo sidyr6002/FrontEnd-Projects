@@ -29,7 +29,6 @@ A web browser, such as Chrome, Firefox, or Safari
 
 1. Clone the project from GitHub: 
 ``` git clone https://github.com/sidyr6002/FrontEnd-Projects.git ```
-
 2. Open it in VS Code and navigate to the project directory: eg. Social Media
 3. Open the `index.html` file in your web browser.
 
