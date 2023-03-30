@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---------------------- META DATA ABOUT THE PAGE ------------------------------->
+    <title>Weatherio</title>
+    <meta name="title" content="weatherio">
+    <meta name="description" content="weatherio is a weather app that show all info about weather at your location">
+
+    <!----------------------- FONTS AND ICONS LINK ---------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!--------------------------------- CSS --------------------------------------->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.png" width="364" height="58" alt="logo">
+            </a>
+    
+            <div class="search-view" data-search-view>
+                
+                <div class="search-wrapper">
+                    <input type="search" name="search" placeholder="Search City..." autocomplete="off" class="search-feild">
+                    <span class="m-icon">search</span>
+                    <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
+                        <span class="m-icon">arrow_back</span>
+                    </button>
+                </div>
+    
+                <div class="search-result" data-search-result>
+                    <ul class="view-list" data-search-list>
+                        <li class="view-item">
+                            <span class="m-icon">location_on</span>
+                            <div>
+                                <p class="item-title">Hyderabad</p>
+                                <p class="label-2 item-subtitle">Telangana, India</p>
+                            </div>
+    
+                            <a href="" class="item-link has-state" data-search-toggler></a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+    
+            <div class="header-actions">
+                <button class="icon-btn has-state" aria-label="open search" data-search-toggler>
+                    <span class="m-icon icon">search</span>
+                </button>
+
+                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
+                    <span class="m-icon">my_location</span>
+                    <span class="span">Current Location</span>
+                </a>
+            </div>
+        
+        </div>
+
+    </header>
+
+
+    <main>
+        <article class="container">
+
+            <div class="content-left">
+                <!----------------- CURRENT WEATHER ---------------->
+    
+                <section class="section current-weather" aria-label="current weather" data-current-weather>
+                    <div class="card card-lg current-weather-card">
+                        <h2 class="title-2 card-tittle">Now</h2>
+    
+                        <div class="weapper">
+                            <p class="heading">23&deg;<sup>c</sup></p>
+    
+                            <img src="./assets/images/weather_icons/01d.png" width="64" height="64" alt="Overcast Clouds" class="weather-icon">
+                        </div>
+    
+                        <p class="body-3">Overcast Clouds</p>
+    
+                        <ul class="meta-list">
+                            <li class="meta-item">
+                                <span class="m-icon">calendar_today</span>
+                                <p class="title-3 meta-text">
+                                    Thursday 30, March
+                                </p>
+                            </li>
+    
+                            <li class="meta-item">
+                                <span class="m-icon">location_on</span>
+                                <p class="title-3 meta-text">
+                                    Hyderabad, Telangana
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+    
+                </section>
+            </div>
+        </article>
+    </main>
+   
+    <!------------------------ JAVASCRIPT LINK --------------------------------------->
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/route.js"></script>
+</body>
+</html>
