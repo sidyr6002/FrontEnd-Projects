@@ -531,6 +531,7 @@ article.container::before {
 
 .highlights .m-icon {
     font-size: 3.2rem;
+    overflow: initial;
 }
 
 .highlight-list {
@@ -733,7 +734,7 @@ article.container::before {
 
 /* ================================= MEDIA QUIRES =============================== */
 
-@media (min-width: 767px) {
+@media screen and (min-width: 768px) {
 
     /* -------------------- REUSED ------------------------------ */
 
@@ -841,7 +842,7 @@ article.container::before {
     .hourly-forecast .card-sm { padding: 16px; }
 }
 
-@media (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
 
     /* -------------------- CUSTOM -------------------------- */
 
@@ -926,7 +927,9 @@ article.container::before {
         display: none;
     }
 
-    .search-view:focus-within .search-result.active { display: block; }
+    .search-view:focus-within .search-result.active { 
+        display: block; 
+    }
 
     .search-view:has(.search-result.active):focus-within .search-feild {
         border-bottom-left-radius: 0;
@@ -938,11 +941,70 @@ article.container::before {
         top: 100%;
         left: 0;
         width: 100%;
-        max-width: 360px;
+        max-height: 360px;
         border-radius: 0 0 var(--radius-28) var(--radius-28);
         border-block-start: 1px solid var(--outline) ;
-        overflow-y: auto;
+        overflow-y: auto; 
         overflow-y: overlay;
     }
+
+    .search-view .view-list:empty {
+        min-height: 120px;
+    }
+
+    .search-view .view-list::-webkit-scrollbar-button {
+        height: 20px;
+    }
+
+    .search-view:is(:hover, :has(.view-list):hover){
+        filter: drop-shadow(var(--shadow-1));
+    }
+
+    .search-view:is(:focus-within, :has(.view-list):focus-within){
+        filter: drop-shadow(var(--shadow-2));
+    }
+
+    /* -------------------- MAIN -------------------------- */
+
+    main {
+        height: calc(100vh - 120px);
+        height: calc(100svh - 120px);
+    }
+
+    article.container {
+        grid-template-columns: 360px minmax(0, 1fr);
+        gap: 40px;
+    }
+
+    .container .current-weather-card .weapper .weather-icon {
+        width: 70px;
+    }
+
+    .forecast-card .title-2 {
+        --title-2: 2.2rem;
+    }
+
+    .highlight-card:nth-child(-n+2) {
+        height: 200px;
+    }
+
+    .highlight-card:nth-child(n+3) {
+        height: 150px;
+    }
+
+    .highlight-card .m-icon {
+        font-size: 4.8rem;
+    }
+
+    .slider-list {
+        gap: 16px;
+    }
     
+}
+
+@media screen and (min-width: 1400px) {
+
+    .highlight-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
