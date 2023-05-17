@@ -24,7 +24,7 @@ export const url = {
     return `http://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}`;
   },
   geocoding_rev(lat, lon) {
-    retrun`http://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit=6`;
+    return`http://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit=5`;
   },
   /**
    * @param {string} query Search query eg: Hyderbad,IN or Chennai,IN
