@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---------------------- META DATA ABOUT THE PAGE ------------------------------->
@@ -28,26 +28,14 @@
             <div class="search-view" data-search-view>
                 
                 <div class="search-wrapper">
-                    <input type="search" name="search" placeholder="Search City..." autocomplete="off" class="search-feild">
+                    <input type="search" name="search" placeholder="Search City..." autocomplete="off" class="search-feild" data-search-field>
                     <span class="m-icon leading-icon">search</span>
                     <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
                         <span class="m-icon">arrow_back</span>
                     </button>
                 </div>
     
-                <div class="search-result" data-search-result>
-                    <ul class="view-list" data-search-list>
-                        <li class="view-item">
-                            <span class="m-icon">location_on</span>
-                            <div>
-                                <p class="item-title">Hyderabad</p>
-                                <p class="label-2 item-subtitle">Telangana, India</p>
-                            </div>
-    
-                            <a href="" class="item-link has-state" data-search-toggler></a>
-                        </li>
-                    </ul>
-                </div>
+                <div class="search-result" data-search-result></div>
     
             </div>
     
@@ -468,7 +456,8 @@
     </section>
    
     <!------------------------ JAVASCRIPT LINK --------------------------------------->
-    <script src="assets/javascript/app.js"></script>
-    <script src="assets/javascript/route.js"></script>
+    <script src="assets/javascript/app.js" type="module"></script>
+    <script src="assets/javascript/route.js" type="module"></script>
+    <
 </body>
 </html>
