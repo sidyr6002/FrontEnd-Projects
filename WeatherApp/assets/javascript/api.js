@@ -1,6 +1,6 @@
 "use strict";
 
-const api_key = "23982ac12791ffe3d0d82b1741140f61";
+const api_key = window.env.API_KEY; // Hiding the Key from public
 
 /**
  * Fetch data from server
