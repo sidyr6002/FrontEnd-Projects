@@ -566,7 +566,7 @@ article.container::before {
 
 .highlight-card .wrapper {
     justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
 }
 
 .highlight-card .card-list {
@@ -819,6 +819,10 @@ article.container::before {
         margin-block-end: 16px;
     }
 
+    .highlight-card .wrapper {
+        gap: 20px;
+    }
+
     .highlight-list {
         grid-template-columns: 1fr 1fr;
     }
@@ -1009,12 +1013,7 @@ article.container::before {
 
     .slider-list {
         gap: 16px;
-    }
-
-    .highlight-card .wrapper {
-        gap: 16px;
-    }
-    
+    }    
 }
 
 @media screen and (min-width: 1400px) {

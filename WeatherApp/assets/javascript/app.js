@@ -46,7 +46,7 @@ searchFeild.addEventListener("input", function () {
     searchTimeout = setTimeout(() => {
       fetchData(url.geocoding(searchFeild.value), function (locations) {
         searchFeild.classList.remove("searching");
-        searchFeild.classList.add("active");
+        searchResult.classList.add("active");
         searchResult.innerHTML = `
                     <ul class="view-list" data-search-list>
                     </ul>
@@ -69,7 +69,7 @@ searchFeild.addEventListener("input", function () {
 
                     <a href="#/weather?lat=${lat}&lon=${lon}" class="item-link has-state" aria-label="${name} weather" data-search-toggler></a>
                 `;
-
+        
           searchResult
             .querySelector("[data-search-list]")
             .appendChild(searchItem);
@@ -102,9 +102,9 @@ const errorContent = document.querySelector("[data-error-content]");
 export const updateWeather = function (lat, lon) {
     console.log("Coordinates : " + lat.toString() + ' ' + lon.toString())
     
-    // loading.style.display = "grid";
-    container.style.overflowY = "scroll";
-    // container.classList.contains("fade-in") ?? container.classList.remove("fade-in");
+    loading.style.display = "grid";
+    container.style.overflowY = "hidden";
+    container.classList.contains("fade-in") ?? container.classList.remove("fade-in");
     errorContent.style.display = "none";
 
     const currentWeatherSection = document.querySelector("[data-current-weather]");
@@ -335,13 +335,54 @@ export const updateWeather = function (lat, lon) {
                 `
                 hourlyForecatSection.querySelector("[data-wind]").appendChild(windList);
             }
-        })
 
-        
+            /**
+             * 5 Day forecast
+             */
+            fiveDayForecastSection.innerHTML = `
+                <h2 class="title-2" id="forecast-label">5 Days forecast</h2>
+                <div class="card card-lg forecast-card">
+                    <ul data-forecast-list></ul>
+                </div>           
+            `
+
+            for(let i=7; i<forecastList.length; i+=8) {
+
+                const {
+                    main: { temp_max },
+                    weather,
+                    dt_txt
+                } = forecastList[i];
+                const [{ icon, description }] = weather;
+                const date = new Date(dt_txt);
+
+                const list = document.createElement("li")
+                list.classList.add("card-item")
+
+                list.innerHTML = `
+                    <div class="icon-wrapper">
+                        <img src="./assets/images/weather_icons/${icon}.png" alt="Overcast Clouds" width="36" height="36" class="weather-icon" alt="${description}" title="${description}>
+                        <span class="span">
+                            <p class="title-2">${parseInt(temp_max)}&deg;</p>
+                        </span>
+                    </div>
+                    <p class="label-1">${date.getDate()} ${module.monthNames[date.getUTCMonth()]}</p>
+                    <p class="label-1">${module.weekDayNames[date.getUTCDay()]}</p>                
+                `
+
+                fiveDayForecastSection.querySelector("[data-forecast-list]").appendChild(list)
+            }
+
+            loading.style.display = "none";
+            container.style.overflowY = "overlay";
+            container.classList.add("fade-in");
+        });
     });
 
     
 };
 
 
-export const error404 = function () {};
+export const error404 = function () {
+    errorContent.style.display = "flex";
+};
