@@ -18,6 +18,21 @@ The application is designed to be responsive and is optimized for both large and
 
 Socius is built with a user-friendly interface that allows users to easily navigate and customize their website. The application also includes a preview feature that enables users to view their website as they customize it.
 
+## Weather Tracker Application
+
+The Weather Tracker Application is a weather forecasting application that provides real-time weather information using the OpenWeather API. It allows users to track the current weather conditions, today's highlights, and provides an overview of what the weather will be like later in the day.
+
+### Features
+1. Current Weather: The application displays the current weather conditions for the specified location, including temperature, weather description, wind speed, and wind direction.
+
+2. Today's Highlights: The application provides important weather highlights for the current day, such as the Air Quality Index (AQI), sunset and sunrise times, humidity, pressure, visibility, and feels-like temperature.
+
+3. 5-Day Forecast: The application provides a 5-day weather forecast, displaying the temperature range for each day, allowing users to plan ahead.
+
+4. Weather Forecast: The application offers an overview of what the weather will likely be later in the day, including the temperature range, weather description, and any expected weather changes.
+
+[![Take a Look](https://drive.google.com/file/d/1nAJQsvrwzCj4xFxXYZSf3hlyvQ5H1MuV/view?usp=sharing)](https://drive.google.com/file/d/1xqx5vlMesV1GyhcwFgBp9n8nWBFKMqp_/view?usp=sharing)
+
 ## 
 ## TO RUN ALL THE PROJECTS 
 
