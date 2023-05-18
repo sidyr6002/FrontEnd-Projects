@@ -295,6 +295,15 @@ body {
     font-size: var(--label-2);
 }
 
+.fade-in {
+    animation: fade-in 250ms ease forwards;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 /* ========================================= HEADER ================================================= */
 
 .header .btn-primary .span {
@@ -557,7 +566,7 @@ article.container::before {
 
 .highlight-card .wrapper {
     justify-content: space-between;
-    gap: 16px;
+    gap: 30px;
 }
 
 .highlight-card .card-list {
@@ -568,11 +577,13 @@ article.container::before {
 
 .highlight-card .card-item {
     width: 50%;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 4px;
 }
 
-.highlight-card .label-1 { color: var(--on-surface-variant); }
+.highlight-card .card-item .label-1 { 
+    color: var(--on-surface-variant); 
+}
 
 .badge {
     position: absolute;
@@ -866,7 +877,7 @@ article.container::before {
     }
 
     .title-1 {
-        --title-1: 3.6rem;
+        --title-1: 3.3rem;
     }
 
     .highlight-card.two .card-item {
@@ -997,6 +1008,10 @@ article.container::before {
     }
 
     .slider-list {
+        gap: 16px;
+    }
+
+    .highlight-card .wrapper {
         gap: 16px;
     }
     
