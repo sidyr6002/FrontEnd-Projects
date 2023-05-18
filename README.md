@@ -31,7 +31,11 @@ The Weather Tracker Application is a weather forecasting application that provid
 
 4. Weather Forecast: The application offers an overview of what the weather will likely be later in the day, including the temperature range, weather description, and any expected weather changes.
 
-[![Take a Look](https://drive.google.com/file/d/1nAJQsvrwzCj4xFxXYZSf3hlyvQ5H1MuV/view?usp=sharing)](https://drive.google.com/file/d/1xqx5vlMesV1GyhcwFgBp9n8nWBFKMqp_/view?usp=sharing)
+#### Take a look at below video:
+
+[![Take a Look](https://drive.google.com/uc?id=1nAJQsvrwzCj4xFxXYZSf3hlyvQ5H1MuV)](https://drive.google.com/file/d/1MpeNiJ97Td6GBkEgCnvgxtvCdY0Xl1yo/view?usp=sharing)
+
+
 
 ## 
 ## TO RUN ALL THE PROJECTS 
